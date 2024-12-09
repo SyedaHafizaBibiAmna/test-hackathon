@@ -25,7 +25,7 @@ const AboutHero = () => {
       {/* Right Section */}
       <div className="w-full md:w-[619px] h-auto md:h-[478px] mt-6 md:mt-0 md:ml-6">
         <Image
-          src="/Images/Image Block.png"
+          src="/images/Image Block.png"
           alt="Comforty Image"
           width={619}
           height={478}

@@ -10,7 +10,7 @@ const AboutPopularProduct = () => {
       <div className="flex flex-col sm:flex-row lg:flex-row justify-between gap-8">
         <div className="text-center">
           <Image
-            src="/images/large.png"
+            src="/images/01.png"
             alt="1"
             width={590}
             height={375}
@@ -21,7 +21,7 @@ const AboutPopularProduct = () => {
         </div>
         <div className="text-center">
           <Image
-            src="/images/parent.png"
+            src="/images/1.jpg"
             alt="2"
             width={305}
             height={375}
