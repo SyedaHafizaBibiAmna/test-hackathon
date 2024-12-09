@@ -1,169 +1,209 @@
 import React from "react";
-import { Poppins } from "next/font/google";
-import { FaMapMarkerAlt, FaPhone } from "react-icons/fa";
-import { GoClockFill } from "react-icons/go";
-import Contact from "../components/contact";
+import { FaClock, FaPhoneAlt } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { FcCustomerSupport } from "react-icons/fc";
 
-
-const poppins = Poppins({ subsets: ["latin"], weight: ["500", "600"] });
-
-const Page = () => {
+const Contact = () => {
   return (
-    <div className="max-w-screen-xl mx-auto mt-24 px-4 sm:px-6">
-      {/* Heading */}
-      <h1 className="font-semibold text-4xl text-center sm:text-3xl">
-        Get In Touch With Us
-      </h1>
-
-      {/* Description */}
-      <p className="text-[16px] text-[#9F9F9F] font-normal text-center mt-[30px] sm:w-full sm:text-sm">
-        For More Information About Our Product & Services. Please Feel Free To
-        Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not
-        Hesitate!
-      </p>
-
-      {/* Grid Layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-[60px]">
-        {/* Left Section: Contact Info */}
-        <div className="flex flex-col space-y-8 px-6 sm:px-10">
-          {/* Address */}
-          <div className="flex items-start space-x-4">
-            <FaMapMarkerAlt className="text-black h-[27.59px] mt-1" />
-            <div>
-              <h2
-                className={`${poppins.className} text-[20px] sm:text-[24px] font-medium`}
-              >
-                Address
-              </h2>
-              <p className="text-black font-normal text-[14px] sm:text-[16px]">
-                236 5th SE Avenue, New York NY10000, United States
-              </p>
-            </div>
+    <div className="flex justify-center items-center">
+      <section className="bg-white dark:bg-gray-900">
+        <div className="container px-6 py-12 mx-auto">
+          <div className="text-center">
+            {/* <p className="font-medium text-blue-500 dark:text-blue-400">Contact us</p> */}
+            <h1 className="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">
+              Get In Touch With Us
+            </h1>
+            <span className="mt-3 text-gray-500 dark:text-gray-400">
+              For More Information About Our Product & Services. Please Feel
+              Free To Drop Us
+              <br /> An Email. Our Staff Always Be There To Help You Out. Do Not
+              Hesitate!
+            </span>
           </div>
 
-          {/* Phone */}
-          <div className="flex items-start space-x-4">
-            <FaPhone className="text-black h-[27.59px] mt-1" />
+          {/* Grid Section */}
+          <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-2">
+            {/* Left Section */}
             <div>
-              <h2
-                className={`${poppins.className} text-[20px] sm:text-[24px] font-medium`}
-              >
-                Phone
-              </h2>
-              <p className="text-black font-normal text-[14px] sm:text-[16px]">
-                Mobile: +(84) 546-6789 <br /> Hotline: +(84) 456-6789
-              </p>
-            </div>
-          </div>
+              <div className="mb-8">
+                <h2 className="text-lg flex items-center font-medium text-gray-800 dark:text-white">
+                  <FaLocationDot className="text-black-500 w-6 h-6 mr-2" />
+                  Address
+                </h2>
+                <div className="mt-1 w-fit px-4 py-2 bg-gray-100 rounded-lg dark:bg-gray-800">
+                  <span className="text-gray-600 dark:text-gray-300">
+                    236 5th SE Avenue, New York NY10000, United States
+                  </span>
+                </div>
+              </div>
 
-          {/* Working Time */}
-          <div className="flex items-start space-x-4">
-            <GoClockFill className="text-black h-[27.59px] mt-1" />
+              <div className="mb-8">
+                <h2 className="text-lg flex items-center font-medium text-gray-800 dark:text-white">
+                  <FaPhoneAlt className="text-black-500 w-5 h-5 mr-2" />
+                  Phone
+                </h2>
+                <div className="mt-1 w-fit px-4 py-2 bg-gray-100 rounded-lg dark:bg-gray-800">
+                  <span className="text-gray-600 dark:text-gray-300 block">
+                    Mobile: +(84) 546-6789
+                  </span>
+                  <span className="text-gray-600 dark:text-gray-300 block">
+                    Hotline: +(84) 456-6789
+                  </span>
+                </div>
+              </div>
+
+              <div className="mb-8">
+                <h2 className="text-lg flex items-center font-medium text-gray-800 dark:text-white">
+                  <FaClock className="text-black-500 w-5 h-5 mr-2" />
+                  Working Time
+                </h2>
+                <div className="mt-1 w-fit px-4 py-2 bg-gray-100 rounded-lg dark:bg-gray-800">
+                  <span className="text-gray-600 dark:text-gray-300 block">
+                    Monday-Friday: 9:00 - 22:00
+                  </span>
+                  <span className="text-gray-600 dark:text-gray-300 block">
+                    Saturday-Sunday: 9:00 - 21:00
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Section */}
             <div>
-              <h2
-                className={`${poppins.className} text-[20px] sm:text-[24px] font-medium`}
-              >
-                Working Time
-              </h2>
-              <p className="text-black font-normal text-[14px] sm:text-[16px]">
-                Monday-Friday: 9:00 - 22:00 <br />
-                Saturday-Sunday: 9:00 - 21:00
-              </p>
+              <form>
+                <div className="mb-4">
+                  <label
+                    className="block text-gray-600 dark:text-gray-400"
+                    htmlFor="name"
+                  >
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full px-4 py-2 mt-2 text-gray-700 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-800 dark:text-gray-300"
+                    placeholder="Abc"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    className="block text-gray-600 dark:text-gray-400"
+                    htmlFor="email"
+                  >
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full px-4 py-2 mt-2 text-gray-700 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-800 dark:text-gray-300"
+                    placeholder="Abc@def.com"
+                  />
+                  <div className="mb-4">
+                    <label
+                      className="block text-gray-600 dark:text-gray-400"
+                      htmlFor="name"
+                    >
+                      Subject
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      className="w-full px-4 py-2 mt-2 text-gray-700 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-800 dark:text-gray-300"
+                      placeholder="This is an optional"
+                    />
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <label
+                    className="block text-gray-600 dark:text-gray-400"
+                    htmlFor="message"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    className="w-full px-4 py-2 mt-2 text-gray-700 bg-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-gray-800 dark:text-gray-300"
+                    placeholder="Write your message"
+                  ></textarea>
+                </div>
+                <button className="w-[200px] px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600">
+                  Submit
+                </button>
+              </form>
             </div>
           </div>
         </div>
 
-        {/* Right Section: Contact Form */}
-        <div className="bg-white p-8 w-full sm:w-[635px]">
-          <form action="#" method="POST">
-            {/* Name */}
-            <div className="mb-4">
-              <label
-                htmlFor="name"
-                className={`${poppins.className} text-[16px] sm:text-[18px] font-medium`}
-              >
-                Your name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Abc"
-                className="w-full sm:w-[528.75px] h-[75px] p-6 border border-[#9F9F9F] rounded-[10px] mt-5"
-                required
-              />
-            </div>
+        {/* last */}
 
-            {/* Email */}
-            <div className="mb-4 mt-8">
-              <label
-                htmlFor="email"
-                className={`${poppins.className} text-[16px] sm:text-[18px] font-medium`}
-              >
-                Email address
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Abc@def.com"
-                className="w-full sm:w-[528.75px] h-[75px] p-6 border border-[#9F9F9F] rounded-[10px] mt-5"
-                required
-              />
-            </div>
+        <section className="bg-white dark:bg-gray-900">
+          <div className="container px-6 py-12 mx-auto">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+              <div>
+                <svg
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+  viewBox="0 0 24 24"
+  strokeWidth="1.5"
+  stroke="currentColor"
+  className="w-8 h-8"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    d="M16 2a2 2 0 0 1 2 2v2a2 2 0 0 0 2 2h.5A1.5 1.5 0 0 1 22 9.5v3a1.5 1.5 0 0 1-1.5 1.5H18a6 6 0 0 1-12 0H3.5A1.5 1.5 0 0 1 2 12.5v-3A1.5 1.5 0 0 1 3.5 8H4a2 2 0 0 0 2-2V4a2 2 0 0 1 2-2h8zM9 21a3 3 0 1 0 6 0"
+  />
+</svg>
 
-            {/* Subject */}
-            <div className="mb-4 mt-8">
-              <label
-                htmlFor="subject"
-                className={`${poppins.className} text-[16px] sm:text-[18px] font-medium`}
-              >
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                placeholder="This is an optional"
-                className="w-full sm:w-[528.75px] h-[75px] p-6 border border-[#9F9F9F] rounded-[10px] mt-5"
-              />
-            </div>
+                <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                  High Quality
+                </h1>
+                <p className="mt-2 text-gray-500 dark:text-gray-400">
+                  crafted from top materials
+                </p>
+              </div>
+              <div>
+              <svg
+  className="w-8 h-8"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  strokeWidth="2"
+>
+  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" />
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    d="M9 12l2 2 4-4"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+  />
+</svg>
 
-            {/* Message */}
-            <div className="mb-8 mt-8">
-              <label
-                htmlFor="message"
-                className={`${poppins.className} text-[16px] sm:text-[18px] font-medium`}
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                placeholder="Hi! I’d like to ask about"
-                className="w-full sm:w-[527px] h-[120px] p-6 border border-[#9F9F9F] rounded-[10px] mt-5"
-                rows={4}
-                required
-              ></textarea>
+                <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                  Warranty Protection
+                </h1>
+                <p className="mt-2 text-gray-500 dark:text-gray-400">
+                  Over 2 years
+                </p>
+              </div>
+              <div>
+              <FcCustomerSupport className="size-8" />
+                <h1 className="mt-4 text-xl font-semibold text-gray-800 dark:text-white">
+                  24 / 7 Support
+                </h1>
+                <p className="mt-2 text-gray-500 dark:text-gray-400">
+                  Dedicated support
+                </p>
+              </div>
             </div>
-
-            {/* Submit Button */}
-            <div>
-              <button
-                type="submit"
-                className="w-full sm:w-[237px] h-[55px] bg-[#029FAE] border border-[#B88E2F] rounded-[5px] text-white py-3"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-
-      {/* Contact Section */}
-      <Contact/>
+          </div>
+        </section>
+      </section>
     </div>
   );
 };
 
-export default Page;
+export default Contact;

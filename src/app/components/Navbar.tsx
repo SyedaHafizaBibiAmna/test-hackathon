@@ -8,6 +8,8 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  
+
   };
 
   return (
@@ -39,6 +41,11 @@ const Navbar = () => {
       >
         Pages
       </Link>
+      <Link
+        href="/singleProductPage"
+        className="text-[#736c90] hover:text-blue-600 transition-colors duration-300 text-[14px] font-medium"
+      > Single Product</Link>
+
       <Link
         href="/about"
         className="text-[#736c90] hover:text-blue-600 transition-colors duration-300 text-[14px] font-medium"

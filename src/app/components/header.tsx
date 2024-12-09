@@ -1,8 +1,9 @@
+import Link from 'next/link';
 import React from 'react';
-import { AiOutlineExclamationCircle } from 'react-icons/ai';
+
 import { GiSofa } from 'react-icons/gi';
 import { LuShoppingCart } from 'react-icons/lu';
-import { MdCheck } from 'react-icons/md';
+
 import { PiNumberCircleTwoFill } from 'react-icons/pi';
 
 
@@ -43,7 +44,7 @@ export const Middleheader = () => {
       <div className="flex items-center justify-between h-16 w-full mt-6 px-4 md:px-12 lg:px-24 bg-gray-100">
         {/* Left Section */}
         <header className="flex items-center">
-          <a
+          <Link
             href="/"
             className="flex items-center title-font font-medium text-gray-900"
           >
@@ -51,7 +52,7 @@ export const Middleheader = () => {
             <span className="text-2xl md:text-3xl font-semibold text-[#272343]">
               Comforty
             </span>
-          </a>
+          </Link>
         </header>
   
         {/* Right Section */}

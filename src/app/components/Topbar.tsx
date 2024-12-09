@@ -1,8 +1,6 @@
-import { ChevronDown } from "lucide-react";
-import Link from "next/link";
 import React from "react";
 import { AiOutlineExclamationCircle } from "react-icons/ai";
-import { FaCheck, FaExclamationCircle } from "react-icons/fa";
+
 import { MdCheck } from "react-icons/md";
 
 const Topbar = () => {
